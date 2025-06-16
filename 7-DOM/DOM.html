@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .border{
+            border: 2px dotted black;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="border">
+        <h1 id="mainHeading">Welcome!</h1>
+        <p class="intro">This is your DOM journey.</p>
+    </div>
+
+    <div class="border">
+        <h1 id="title">JavaScript is cool</h1>
+        <p class="desc">Learning DOM is fun</p>
+    </div>
+
+    <div class="border">
+        <h2 id="highlight">DOM Styling is Fun!</h2>
+        <p id="note">Watch this text transform with JS.</p>
+    </div>
+
+
+    <script>
+
+        let heading = document.getElementById("mainHeading");
+        console.log(heading);
+
+        let paragraph = document.querySelector(".intro");
+        console.log(paragraph);
+
+
+
+
+        let title = document.getElementById("title")
+        console.log(title)
+
+        let desc = document.querySelector(".desc")
+        console.log(desc)
+
+        title.innerText = "Mastering the DOM" //changes the inner text of an element
+
+        title.style.color = "crimson"
+        desc.style.fontWeight = "bold"
+
+
+
+        let highLight = document.getElementById("highlight")
+        let note = document.getElementById("note")
+
+        highLight.style.color = "tomato"
+        highLight.style.fontSize = "2rem"
+        highLight.style.textAlign = "center"
+
+        note.style.backgroundColor = "#fef3c7"
+        note.style.padding = "10px"
+        note.style.borderRadius = "20px"
+        note.style.fontStyle = "italic"
+
+
+
+        heading.style.fontFamily = "Courier New"
+        heading.style.color = "midnightblue"
+        heading.style.borderBottom = "3px solid midnightblue"
+    </script>
+</body>
+
+</html>
