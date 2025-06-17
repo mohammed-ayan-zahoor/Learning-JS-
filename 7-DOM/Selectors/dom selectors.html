@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selectors</title>
+    <style>
+        .cont {
+            margin: 10px;
+            padding: 5px;
+            border: 3px dotted black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <p class="desc">Line 1</p>
+        <p class="desc">Line 2</p>
+    </div>
+
+    <div class="cont">
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+    </div>
+
+    <div class="cont">
+        <div id="hero">I’m the hero</div>
+        <p class="para">Paragraph 1</p>
+        <p class="para">Paragraph 2</p>
+        <h2>Subheading</h2>
+        <h2>Another Subheading</h2>
+    </div>
+
+
+    <script>
+
+        let descs = document.getElementsByClassName("desc");
+        console.log(descs);
+        let descs1 = descs[1].textContent;
+        console.log(descs1);
+
+
+        let items = document.getElementsByTagName("li")
+        console.log(items)
+
+
+        let hero = document.getElementById("hero")
+        console.log(hero)
+
+        let para = document.getElementsByClassName("para")
+        let paraText = [para[0].textContent, para[1].textContent]
+        console.log(paraText)
+
+
+        let h2 = document.getElementsByTagName("h2")
+        console.log(h2.length)
+
+
+    </script>
+</body>
+
+</html>
